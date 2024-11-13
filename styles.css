@@ -1,0 +1,273 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.h1-logo{
+    text-transform: uppercase;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Seções */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Estilo da Seção Início com Imagem de Fundo */
+#inicio {
+    background-image: url('imagens/inicial.jpg'); /* Substitua 'caminho-da-imagem.jpg' pelo caminho da sua imagem */
+    background-size: cover; /* A imagem cobre toda a seção */
+    background-position: center; /* Centraliza a imagem */
+    background-attachment: fixed; /* Efeito de paralaxe em desktop */
+    color: #fff; /* Deixa o texto branco para melhorar a visibilidade sobre a imagem */
+    padding: 60px 20px;
+    text-align: center;
+    height: 500px;
+}
+
+/* Ajuste para melhorar o contraste do texto */
+#inicio h1, #inicio p, #inicio button {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Botão personalizado */
+#inicio button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#inicio button:hover {
+    background-color: #e5c600;
+}
+
+.section:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+/* Quem Somos */
+.quem-somos-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.quem-somos-content img {
+    max-width: 300px;
+    border-radius: 8px;
+}
+
+/* Estilo da Seção Missão, Visão e Valores */
+#missao-visao-valores {
+    padding: 60px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#missao-visao-valores h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.mvv-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.mvv-item {
+    width: 30%;
+    min-width: 250px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mvv-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.mvv-item p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Media Query para telas pequenas */
+@media (max-width: 768px) {
+    .mvv-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mvv-item {
+        width: 100%;
+    }
+}
+
+
+/* Equipe */
+.advogado {
+    display: inline-block;
+    text-align: center;
+    margin: 20px;
+}
+
+.advogado img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Áreas de Atuação */
+.areas {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.area {
+    width: 200px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.area img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+/* Contato */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Media Queries para Responsividade */
+
+/* Ajuste para tablets */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 
+    }
+}
