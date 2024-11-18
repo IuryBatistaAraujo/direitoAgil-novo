@@ -10,10 +10,6 @@
 <body>
     <!-- Cabeçalho com logo e menu de navegação -->
     <header>
-        <div class="logo">
-                <h1 class="h1-logo">Direito ágil</h1>
-                <img width="48" height="48"  src="https://img.icons8.com/?size=100&id=388&format=png&color=b49c73" alt="scales"/>
-        </div>
         <nav>
             <ul>
                 <li><a href="#inicio">Início</a></li>
@@ -21,6 +17,7 @@
                 <li><a href="#equipe">Equipe</a></li>
                 <li><a href="#areas-atuacao">Áreas de Atuação</a></li>
                 <li><a href="#contato">Contato</a></li>
+                <li><a href="#consultas">Consultas</a></li>
             </ul>
         </nav>
     </header>
@@ -39,7 +36,7 @@
         <div class="quem-somos-content">
             <img src="imagens/quemsomos.png" alt="Imagem sobre quem somos">
             <div class="texto">
-                <h2>Quem Somos</h2>
+                <h2 class="text-title">Quem Somos</h2>
                 <p>Somos a Direito Ágil, uma consultoria jurídica online dedicada a fornecer soluções práticas e rápidas, com transparência e compromisso.</p>
             </div>
         </div>
@@ -47,7 +44,7 @@
 
     <!-- Nova Seção: Missão, Visão e Valores -->
 <section id="missao-visao-valores" class="section">
-    <h2>Missão, Visão e Valores</h2>
+    <h2 class="text-title">Missão, Visão e Valores</h2>
     <div class="mvv-content">
         <div class="mvv-item">
             <h3>Missão</h3>
@@ -66,7 +63,7 @@
 
     <!-- Seção Equipe -->
     <section id="equipe" class="section">
-        <h2>Nossa Equipe</h2>
+        <h2 class="text-title">Nossa Equipe</h2>
         <div class="advogado">
             <img src="imagens/advogado1.png" alt="Advogado 1">
             <p><strong>Dr. João Silva</strong> - Direito Trabalhista</p>
@@ -92,26 +89,42 @@
 
     <!-- Seção Áreas de Atuação -->
     <section id="areas-atuacao" class="section">
-        <h2>Áreas de Atuação</h2>
+        <h2 class="text-title">Áreas de Atuação</h2>
         <div class="areas">
-            <div class="area">
-                <img src="https://img.icons8.com/?size=100&id=20318&format=png&color=000000" alt="Direito Trabalhista">
-                <h3>Direito Trabalhista</h3>
-            </div>
-            <div class="area">
-                <img src="https://img.icons8.com/?size=100&id=t5GRNS5yIsHP&format=png&color=000000" alt="Direito Contratual">
-                <h3>DireitoㅤContratual</h3>
-            </div>
-            <div class="area">
-                <img src="https://img.icons8.com/?size=100&id=8386&format=png&color=000000" alt="Direito do Consumidor">
-                <h3>Direito do Consumidor</h3>
-            </div>
+            <a href="#">
+                <div class="area">
+                    <img src="https://img.icons8.com/?size=100&id=20318&format=png&color=000000" alt="Direito Trabalhista">
+                    <h3>Direito Trabalhista</h3>
+                </div>
+            </a>
+            <a href="#">
+                <div class="area">
+                    <img src="https://img.icons8.com/?size=100&id=t5GRNS5yIsHP&format=png&color=000000" alt="Direito Contratual">
+                    <h3>DireitoㅤContratual</h3>
+                </div>
+            </a>
+            <a href="">
+                <div class="area">
+                    <img src="https://img.icons8.com/?size=100&id=90815&format=png&color=000000">
+                    <h3>Direito do Consumidor</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Seção Consultas -->
+    <section id="consultas" class="section">
+        <h2 class="text-title">Consultas</h2>
+        <p>Gerencie suas consultas ou agende uma nova com nossa equipe jurídica.</p>
+        <div class="consultas-actions">
+            <button onclick="marcarConsulta()">Marcar Consulta</button>
+            <button onclick="gerenciarConsultas()">Gerenciar Consultas</button>
         </div>
     </section>
 
     <!-- Seção Contato -->
     <section id="contato" class="section">
-        <h2>Contato</h2>
+        <h2 class="text-title">Contato</h2>
         <form>
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>

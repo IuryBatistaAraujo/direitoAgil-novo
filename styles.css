@@ -12,17 +12,22 @@ body {
 
 /* Estilos para o cabeçalho */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #333;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .h1-logo{
     text-transform: uppercase;
-    
 }
 
 .logo {
@@ -43,12 +48,14 @@ nav {
     flex: 1;
     display: flex;
     justify-content: center;
+    height: 20px;
 }
 
 nav ul {
     display: flex;
     list-style: none;
     padding: 0;
+    text-transform: uppercase;
 }
 
 nav ul li {
@@ -63,6 +70,11 @@ nav ul li a {
 
 nav ul li a:hover {
     color: #ffd700;
+}
+
+.text-title {
+    font-size: 35px;
+    margin: 20px;
 }
 
 /* Seções */
@@ -85,14 +97,18 @@ nav ul li a:hover {
 
 /* Ajuste para melhorar o contraste do texto */
 #inicio h1, #inicio p, #inicio button {
+    font-size: 50px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Botão personalizado */
 #inicio button {
+    width: 250px;
+    height: 50px;
     margin-top: 20px;
     padding: 10px 20px;
     font-size: 1rem;
+    text-transform: uppercase;
     color: #333;
     background-color: #ffd700;
     border: none;
@@ -198,17 +214,68 @@ nav ul li a:hover {
 }
 
 .area {
+    background-color: #fff;
     width: 200px;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .area img {
     width: 100px;
     height: 100px;
     margin-bottom: 10px;
+}
+
+/* Estilo da Seção Consultas */
+#consultas {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#consultas h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#consultas p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.consultas-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.consultas-actions button {
+    padding: 15px 25px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #333;
+    background-color: #ffd700;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.consultas-actions button:hover {
+    background-color: #e5c600;
+}
+
+/* Media Query para telas menores */
+@media (max-width: 768px) {
+    .consultas-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 /* Contato */
@@ -218,7 +285,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
+    }
 
 form label {
     font-weight: bold;
