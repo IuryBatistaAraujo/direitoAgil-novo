@@ -16,7 +16,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #333;
+    height: 10%;
+    background-color: #37373F;
     color: #fff;
     display: flex;
     align-items: center;
@@ -26,28 +27,16 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.h1-logo{
-    text-transform: uppercase;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-}
-
 .logo img {
-    margin-right: 10px;
-}
-
-.logo h1 {
-    font-size: 1.5rem;
-    margin: 0;
+    max-height: 35px; /* Ajuste o tamanho da logo */
 }
 
 nav {
     flex: 1;
     display: flex;
     justify-content: center;
+    margin-right: 145px;  /* Ajuste o valor conforme necessário para mover mais ou menos */
+
     height: 20px;
 }
 
@@ -72,6 +61,21 @@ nav ul li a:hover {
     color: #ffd700;
 }
 
+/* Estilo do botão "Entrar" */
+.entrar button {
+    background-color: #ffd700;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.entrar button:hover {
+    background-color: #e5c600;
+}
+
 .text-title {
     font-size: 35px;
     margin: 20px;
@@ -85,7 +89,7 @@ nav ul li a:hover {
 
 /* Estilo da Seção Início com Imagem de Fundo */
 #inicio {
-    background-image: url('imagens/inicial.jpg'); /* Substitua 'caminho-da-imagem.jpg' pelo caminho da sua imagem */
+    background-image: url('https://img.freepik.com/fotos-premium/escalas-de-justica-no-escuro-conceito-de-direito-do-tribunal-de-justica-de-jurisprudencia-judiciaria-e-ia-generativa-de-justica_438099-12423.jpg?w=1060'); /* Substitua 'caminho-da-imagem.jpg' pelo caminho da sua imagem */
     background-size: cover; /* A imagem cobre toda a seção */
     background-position: center; /* Centraliza a imagem */
     background-attachment: fixed; /* Efeito de paralaxe em desktop */
@@ -100,6 +104,12 @@ nav ul li a:hover {
     font-size: 50px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+
+.text-inicio {
+    font-size: 30px;
+    margin: 20px;
+}
+
 
 /* Botão personalizado */
 #inicio button {
@@ -121,27 +131,70 @@ nav ul li a:hover {
 }
 
 .section:nth-child(even) {
-    background-color: #f4f4f4;
+    background-color: #495168;
 }
 
 /* Quem Somos */
+/* Estilos para a seção Quem Somos */
 .quem-somos-content {
+    background-color: #5e5e5e;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
+    text-align: justify; /* Alinha o texto à esquerda e justifica a linha */
+    margin-top: 20px; /* Adiciona um pouco de espaço superior */
 }
 
 .quem-somos-content img {
-    max-width: 300px;
+    max-width: 420px;
+    width: 100%;
+    height: auto;
     border-radius: 8px;
 }
+
+.texto {
+    max-width: 800px; /* Define o tamanho máximo para o texto */
+    text-align: justify; /* Justifica o texto */
+    line-height: 1.6; /* Aumenta o espaçamento entre as linhas */
+}
+
+.texto p {
+    font-size: 1.1rem;
+    color: #555; /* Cor do texto ajustada para suavizar o contraste */
+    margin-bottom: 20px; /* Espaçamento entre os parágrafos */
+}
+
+.texto h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333; /* Cor escura para o título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+/* Media Query para telas pequenas */
+@media (max-width: 768px) {
+    .quem-somos-content {
+        flex-direction: column; /* Organiza o conteúdo em coluna */
+        align-items: center; /* Alinha o conteúdo ao centro */
+    }
+
+    .texto {
+        text-align: center; /* Alinha o texto ao centro em telas pequenas */
+    }
+
+    .quem-somos-content img {
+        max-width: 100%; /* Imagem ocupa 100% da largura disponível */
+        margin-bottom: 20px; /* Adiciona espaçamento entre a imagem e o texto */
+    }
+}
+
 
 /* Estilo da Seção Missão, Visão e Valores */
 #missao-visao-valores {
     padding: 60px 20px;
-    background-color: #f4f4f4;
+    background-color: #495168;
     text-align: center;
 }
 
@@ -195,14 +248,57 @@ nav ul li a:hover {
 .advogado {
     display: inline-block;
     text-align: center;
-    margin: 20px;
+    margin: 60px;
 }
 
 .advogado img {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     margin-bottom: 10px;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 50;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-content {
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: black;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff0000;
+    cursor: pointer;
+}
+
+.modal.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 /* Áreas de Atuação */
@@ -227,6 +323,15 @@ nav ul li a:hover {
     width: 100px;
     height: 100px;
     margin-bottom: 10px;
+}
+
+.link-areasAtuacao {
+    text-decoration: none;
+    color: #333;
+}
+
+.link-areasAtuacao:hover {
+    background-color: #e5c600;
 }
 
 /* Estilo da Seção Consultas */

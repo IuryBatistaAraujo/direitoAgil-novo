@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/styleCadastro.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Bem vindo de volta!</h2>
+                <p class="description description-primary">Para se manter conectado conosco</p>
+                <p class="description description-primary">por favor faça login com suas informações pessoais</p>
+                <button type="submit" id="signin" class="btn btn-primary">Entrar</button>
+            </div>    
+            <div class="second-column">
+                <h2 class="title title-second">Criar conta</h2>
+                
+                <div class="user-type">
+                    <label>
+                        <input type="radio" name="userType" value="cliente" onclick="toggleOABField()" required> Cliente
+                    </label>
+                    <label>
+                        <input type="radio" name="userType" value="advogado" onclick="toggleOABField()"> Advogado
+                    </label>
+                </div>                
+                <form class="form">
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input type="text" placeholder="Nome" required>
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-id-card icon-modify"></i>
+                        <input type="text" placeholder="CPF" required>
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-calendar icon-modify"></i>
+                        <input type="date" placeholder="Data de Nascimento" required>
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-phone icon-modify"></i>
+                        <input type="text" placeholder="Telefone" required>
+                    </label>
+                    
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="Email" required>
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Senha" required>
+                    </label>
+
+                    <label class="label-input" id="oabField" style="display: none;">
+                        <i class="fas fa-id-card icon-modify"></i>
+                        <input type="text" placeholder="N° OAB">
+                    </label>
+
+                    <label class="label-input" id="areaAtuacaoField" style="display: none;">
+                        <i class="fas fa-briefcase icon-modify"></i>
+                        <select placeholder="Área de Atuação">
+                            <option value="trabalhista">Direito Trabalhista</option>
+                            <option value="contratual">Direito Contratual</option>
+                            <option value="consumidor">Direito do Consumidor</option>
+                        </select>
+                    </label>
+                    
+                    <label class="label-input" id="descricaoField" style="display: none;">
+                        <i class="fas fa-pencil-alt icon-modify"></i>
+                        <input type="text" placeholder="Descrição (máximo 150 caracteres)" maxlength="150">
+                    </label>
+
+                    <button class="btn btn-second">Cadastrar</button>        
+                </form>
+            </div>
+        </div>
+        
+        <div class="content second-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Olá, amigo!</h2>
+                <p class="description description-primary">Ainda não possui cadastro?</p>
+                <p class="description description-primary">Começe sua jornada conosco</p>
+                <button type="submit" id="signup" class="btn btn-primary">Cadastrar</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second">Entrar</h2>
+                <form class="form">
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="Email" required>
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Senha" required>
+                    </label>
+
+                    <a class="password" href="#">Esqueci minha senha</a>
+                    <button class="btn btn-second">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/cadastro.js"></script>
+</body>
+</html>

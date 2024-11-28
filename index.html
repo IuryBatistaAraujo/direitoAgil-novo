@@ -5,21 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Direito Ágil - Consultoria Online</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="scripts/modal.js">
 </head>
 <body>
     <!-- Cabeçalho com logo e menu de navegação -->
     <header>
+        <div class="logo">
+            <img src="imagens/logo.png" alt="Logo Direito Ágil"> <!-- Substitua com o caminho da sua logo -->
+        </div>
         <nav>
             <ul>
                 <li><a href="#inicio">Início</a></li>
                 <li><a href="#quem-somos">Quem Somos</a></li>
                 <li><a href="#equipe">Equipe</a></li>
                 <li><a href="#areas-atuacao">Áreas de Atuação</a></li>
-                <li><a href="#contato">Contato</a></li>
                 <li><a href="#consultas">Consultas</a></li>
             </ul>
         </nav>
+        <div class="entrar">
+            <button onclick="window.location.href='http://127.0.0.1:5500/cadastro&login.html'">Entrar</button> <!-- Redireciona para a página de login -->
+        </div>
     </header>
 
     <!-- Seção Início -->
@@ -27,7 +32,8 @@
         <div class="inicio-">
             <h1>Bem-vindo à Direito Ágil</h1>
             <p>Consultoria jurídica online com agilidade e eficiência.</p>
-            <button onclick="agendarConsulta()">Agendar Consulta</button>
+            <h3 class="text-inicio">Ainda não possui cadastro?</h3>
+            <button onclick="agendarConsulta()">Cadastre-se</button>
         </div>
     </section>
 
@@ -37,10 +43,13 @@
             <img src="imagens/quemsomos.png" alt="Imagem sobre quem somos">
             <div class="texto">
                 <h2 class="text-title">Quem Somos</h2>
-                <p>Somos a Direito Ágil, uma consultoria jurídica online dedicada a fornecer soluções práticas e rápidas, com transparência e compromisso.</p>
+                <p>Bem-vindo à <strong>Direito Ágil</strong>, uma consultoria jurídica online inovadora e acessível. Nosso compromisso é transformar o acesso ao direito, tornando-o mais próximo, gratuito e eficaz para todos. Em um mundo cada vez mais digital, acreditamos que a justiça não deve ser um privilégio, mas um direito de todos. Por isso, trabalhamos para oferecer soluções jurídicas rápidas, claras e sem custos elevados.</p>
+                <p>Aqui, o seu problema jurídico é tratado com seriedade, transparência e ética. Nosso objetivo é não apenas resolver questões legais, mas também proporcionar uma experiência de atendimento que seja clara, eficiente e sem barreiras. Queremos ser o ponto de apoio para quem precisa de orientação jurídica, sem complicações ou custos inesperados.</p>
+                <p>Na <strong>Direito Ágil</strong>, você tem acesso a informações jurídicas valiosas de forma gratuita, com agilidade e precisão. Estamos aqui para democratizar o direito, levando conhecimento e soluções jurídicas a quem mais precisa, com a confiança e segurança que você merece.</p>
             </div>
         </div>
     </section>
+    
 
     <!-- Nova Seção: Missão, Visão e Valores -->
 <section id="missao-visao-valores" class="section">
@@ -64,46 +73,83 @@
     <!-- Seção Equipe -->
     <section id="equipe" class="section">
         <h2 class="text-title">Nossa Equipe</h2>
-        <div class="advogado">
-            <img src="imagens/advogado1.png" alt="Advogado 1">
+        <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
+            <a href="javascript:void(0)">
+                <img src="imagens/advogado1.png" alt="Advogado 1">
+            </a>
             <p><strong>Dr. João Silva</strong> - Direito Trabalhista</p>
             <p>OAB: 123456</p>
         </div>
-        <div class="advogado">
-            <img src="imagens/advogada1.png" alt="Advogada 2">
+        <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
+            <a href="javascript:void(0)">
+                <img src="imagens/advogada1.png" alt="Advogada 2">
+            </a>
             <p><strong>Dra. Maria Oliveira</strong> - Direito Civil</p>
             <p>OAB: 654321</p>
         </div>
-        <div class="advogado">
-            <img src="imagens/advogada2.png" alt="Advogada 2">
+        <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
+            <a href="javascript:void(0)">
+                <img src="imagens/advogada2.png" alt="Advogada 3">
+            </a>
             <p><strong>Dra. Maria Oliveira</strong> - Direito Civil</p>
             <p>OAB: 654321</p>
         </div>
-        <div class="advogado">
-            <img src="imagens/advogado3.png" alt="Advogada 2">
+        <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
+            <a href="javascript:void(0)">
+                <img src="imagens/advogado3.png" alt="Advogada 4">
+            </a>
             <p><strong>Dra. Maria Oliveira</strong> - Direito Civil</p>
             <p>OAB: 654321</p>
         </div>
-        <!-- Adicione mais advogados conforme necessário -->
+        <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
+            <a href="javascript:void(0)">
+                <img src="imagens/advogado3.png" alt="Advogada 5">
+            </a>
+            <p><strong>Dra. Maria Oliveira</strong> - Direito Civil</p>
+            <p>OAB: 654321</p>
+        </div>
+        <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
+            <a href="javascript:void(0)">
+                <img src="imagens/advogado3.png" alt="Advogada 6">
+            </a>
+            <p><strong>Dra. Maria Oliveira</strong> - Direito Civil</p>
+            <p>OAB: 654321</p>
+        </div>
+        <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
+            <a href="javascript:void(0)">
+                <img src="imagens/advogado3.png" alt="Advogada 7">
+            </a>
+            <p><strong>Dra. Maria Oliveira</strong> - Direito Civil</p>
+            <p>OAB: 654321</p>
+        </div>
+        <div id="modal-advogado" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-button" onclick="fecharModal()">&times;</span>
+                <h2 id="advogado-nome"></h2>
+                <p id="advogado-especialidade"></p>
+                <p id="advogado-oab"></p>
+                <p id="advogado-descricao"></p>
+            </div>
+        </div>
     </section>
 
     <!-- Seção Áreas de Atuação -->
     <section id="areas-atuacao" class="section">
         <h2 class="text-title">Áreas de Atuação</h2>
         <div class="areas">
-            <a href="#">
+            <a class="link-areasAtuacao" href="#">
                 <div class="area">
                     <img src="https://img.icons8.com/?size=100&id=20318&format=png&color=000000" alt="Direito Trabalhista">
                     <h3>Direito Trabalhista</h3>
                 </div>
             </a>
-            <a href="#">
+            <a class="link-areasAtuacao" href="#">
                 <div class="area">
                     <img src="https://img.icons8.com/?size=100&id=t5GRNS5yIsHP&format=png&color=000000" alt="Direito Contratual">
                     <h3>DireitoㅤContratual</h3>
                 </div>
             </a>
-            <a href="">
+            <a class="link-areasAtuacao" href="">
                 <div class="area">
                     <img src="https://img.icons8.com/?size=100&id=90815&format=png&color=000000">
                     <h3>Direito do Consumidor</h3>
@@ -117,37 +163,16 @@
         <h2 class="text-title">Consultas</h2>
         <p>Gerencie suas consultas ou agende uma nova com nossa equipe jurídica.</p>
         <div class="consultas-actions">
-            <button onclick="marcarConsulta()">Marcar Consulta</button>
-            <button onclick="gerenciarConsultas()">Gerenciar Consultas</button>
+            <a href="agendamento.html"> <button>Marcar Consulta</button> </a>
+            <a href="consulta.html"> <button>Gerenciar Consultas</button> </a>
         </div>
-    </section>
-
-    <!-- Seção Contato -->
-    <section id="contato" class="section">
-        <h2 class="text-title">Contato</h2>
-        <form>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome" name="nome" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" name="telefone">
-
-            <label for="celular">Celular/WhatsApp:</label>
-            <input type="tel" id="celular" name="celular">
-
-            <label for="mensagem">Mensagem:</label>
-            <textarea id="mensagem" name="mensagem" required></textarea>
-
-            <button type="submit">Enviar</button>
-        </form>
     </section>
 
     <footer>
         <p>&copy; 2024 Direito Ágil. Todos os direitos reservados.</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>

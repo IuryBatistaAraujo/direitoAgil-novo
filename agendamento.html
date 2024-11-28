@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Direito Ágil</title>
+    <link rel="stylesheet" href="css/agendamento.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agende sua Consulta</h1>
+        <form action="/enviar_agendamento" method="POST">
+            <label for="area">Área da Consulta:</label>
+            <select id="area" name="area" required>
+                <option value="" disabled selected>Selecione a área</option>
+                <option value="trabalhista">Direito Trabalhista</option>
+                <option value="contratual">Direito Contratual</option>
+                <option value="consumidor">Direito do Consumidor</option>
+            </select>
+
+            <label for="advogado">Advogado Responsável:</label>
+            <select id="advogado" name="advogado" required>
+                <option value="" disabled selected>Selecione o advogado</option>
+                <option value="adv1">Dr. João Silva</option>
+                <option value="adv2">Dra. Maria Oliveira</option>
+                <option value="adv3">Dr. Carlos Santos</option>
+            </select>
+
+            <label for="data">Data da Consulta:</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="horario">Horário da Consulta:</label>
+            <input type="time" id="horario" name="horario" required>
+
+            <label for="descricao">Descrição do Assunto:</label>
+            <textarea id="descricao" name="descricao" rows="4" placeholder="Digite o assunto da consulta..." required></textarea>
+
+            <button type="submit">Agendar Consulta</button>
+        </form>
+    </div>
+</body>
+</html>

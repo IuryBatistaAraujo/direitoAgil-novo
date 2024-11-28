@@ -1,0 +1,25 @@
+/* styles.css (Complemento) */
+.status {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.status h2 {
+    margin-top: 0;
+    color: #007BFF;
+}
+
+.status p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.status strong {
+    color: #333;
+}

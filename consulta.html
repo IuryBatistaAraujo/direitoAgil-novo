@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Agendamento - Direito Ágil</title>
+    <link rel="stylesheet" href="css/cosulta.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta de Agendamento</h1>
+        <form action="/consultar_status" method="POST">
+            <label for="codigo">Código do Agendamento:</label>
+            <input type="text" id="codigo" name="codigo" placeholder="Digite o código do agendamento" required>
+
+            <button type="submit">Consultar</button>
+        </form>
+
+        <div class="status">
+                <h2>Status do Agendamento</h2>
+                <p><strong>Área da Consulta:</strong> Direito Trabalhista</p>
+                <p><strong>Advogado:</strong> Dr. João Silva</p>
+                <p><strong>Data:</strong> 28/11/2024</p>
+                <p><strong>Horário:</strong> 14:00</p>
+                <p><strong>Status:</strong> Confirmado</p>
+                <p><strong>Descrição:</strong> Revisão de contrato de trabalho.</p>
+        </div>
+    </div>
+</body>
+</html>
