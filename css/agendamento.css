@@ -1,9 +1,14 @@
-/* styles.css */
+/* Reset básico */
+body, h1, h2, p, input, select, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,52 +16,88 @@ body {
 }
 
 .container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
     width: 100%;
-    max-width: 400px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    padding: 20px;
 }
 
-h1 {
+header {
     text-align: center;
-    color: #333;
+    margin-bottom: 20px;
 }
 
-form {
+header h1 {
+    font-size: 2rem;
+    color: #007BFF;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.agendamento-form {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-label {
-    font-weight: bold;
+.agendamento-form h2 {
+    color: #007BFF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.label-input {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.label-input i {
+    color: #007BFF;
+    font-size: 1.2rem;
+}
+
+.label-input input,
+.label-input select,
+.label-input textarea {
+    flex: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
     color: #555;
 }
 
-select, input, textarea, button {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
+.label-input textarea {
+    resize: none;
 }
 
-button {
+.label-input input::placeholder,
+.label-input textarea::placeholder {
+    color: #aaa;
+}
+
+button.btn-primary {
+    padding: 12px;
     background-color: #007BFF;
     color: #fff;
-    border: none;
-    cursor: pointer;
+    font-size: 1rem;
     font-weight: bold;
-    transition: background-color 0.3s;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover {
-    background-color: #0056b3;
-}
-
-textarea {
-    resize: none;
+button.btn-primary:hover {
+    background-color: #005
 }

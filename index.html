@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Direito Ágil - Consultoria Online</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="scripts/modal.js">
 </head>
 <body>
@@ -32,8 +32,7 @@
         <div class="inicio-">
             <h1>Bem-vindo à Direito Ágil</h1>
             <p>Consultoria jurídica online com agilidade e eficiência.</p>
-            <h3 class="text-inicio">Ainda não possui cadastro?</h3>
-            <button onclick="agendarConsulta()">Cadastre-se</button>
+            <button onclick="agendarConsulta()">Agendar Consulta</button>
         </div>
     </section>
 
@@ -72,63 +71,65 @@
 
     <!-- Seção Equipe -->
     <section id="equipe" class="section">
-        <h2 class="text-title">Nossa Equipe</h2>
-        <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
-            <a href="javascript:void(0)">
-                <img src="imagens/advogado1.png" alt="Advogado 1">
-            </a>
-            <p><strong>Dr. João Silva</strong> - Direito Trabalhista</p>
-            <p>OAB: 123456</p>
-        </div>
-        <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
-            <a href="javascript:void(0)">
-                <img src="imagens/advogada1.png" alt="Advogada 2">
-            </a>
-            <p><strong>Dra. Maria Oliveira</strong> - Direito Civil</p>
-            <p>OAB: 654321</p>
-        </div>
-        <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
-            <a href="javascript:void(0)">
-                <img src="imagens/advogada2.png" alt="Advogada 3">
-            </a>
-            <p><strong>Dra. Maria Oliveira</strong> - Direito Civil</p>
-            <p>OAB: 654321</p>
-        </div>
-        <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
-            <a href="javascript:void(0)">
-                <img src="imagens/advogado3.png" alt="Advogada 4">
-            </a>
-            <p><strong>Dra. Maria Oliveira</strong> - Direito Civil</p>
-            <p>OAB: 654321</p>
-        </div>
-        <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
-            <a href="javascript:void(0)">
-                <img src="imagens/advogado3.png" alt="Advogada 5">
-            </a>
-            <p><strong>Dra. Maria Oliveira</strong> - Direito Civil</p>
-            <p>OAB: 654321</p>
-        </div>
-        <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
-            <a href="javascript:void(0)">
-                <img src="imagens/advogado3.png" alt="Advogada 6">
-            </a>
-            <p><strong>Dra. Maria Oliveira</strong> - Direito Civil</p>
-            <p>OAB: 654321</p>
-        </div>
-        <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
-            <a href="javascript:void(0)">
-                <img src="imagens/advogado3.png" alt="Advogada 7">
-            </a>
-            <p><strong>Dra. Maria Oliveira</strong> - Direito Civil</p>
-            <p>OAB: 654321</p>
-        </div>
-        <div id="modal-advogado" class="modal hidden">
-            <div class="modal-content">
-                <span class="close-button" onclick="fecharModal()">&times;</span>
-                <h2 id="advogado-nome"></h2>
-                <p id="advogado-especialidade"></p>
-                <p id="advogado-oab"></p>
-                <p id="advogado-descricao"></p>
+        <div class="equipe-content">
+            <h2 class="text-title">Nossa Equipe</h2>
+            <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
+                <a href="javascript:void(0)">
+                    <img src="imagens/advogado1.png" alt="Advogado 1">
+                </a>
+                <p><strong>Dr. João Silva</strong> - Direito Trabalhista</p>
+                <p>OAB: 123456</p>
+            </div>
+            <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
+                <a href="javascript:void(0)">
+                    <img src="imagens/advogada1.png" alt="Advogada 2">
+                </a>
+                <p><strong>Dra. Maria Oliveira</strong> - Direito Civil</p>
+                <p>OAB: 654321</p>
+            </div>
+            <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
+                <a href="javascript:void(0)">
+                    <img src="imagens/advogada2.png" alt="Advogada 3">
+                </a>
+                <p><strong>Dra. Maria Oliveira</strong> - Direito Civil</p>
+                <p>OAB: 654321</p>
+            </div>
+            <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
+                <a href="javascript:void(0)">
+                    <img src="imagens/advogado3.png" alt="Advogada 4">
+                </a>
+                <p><strong>Dra. Maria Oliveira</strong> - Direito Civil</p>
+                <p>OAB: 654321</p>
+            </div>
+            <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
+                <a href="javascript:void(0)">
+                    <img src="imagens/advogado3.png" alt="Advogada 5">
+                </a>
+                <p><strong>Dra. Maria Oliveira</strong> - Direito Civil</p>
+                <p>OAB: 654321</p>
+            </div>
+            <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
+                <a href="javascript:void(0)">
+                    <img src="imagens/advogado3.png" alt="Advogada 6">
+                </a>
+                <p><strong>Dra. Maria Oliveira</strong> - Direito Civil</p>
+                <p>OAB: 654321</p>
+            </div>
+            <div class="advogado" onclick="abrirModal('Dr. João Silva', 'Direito Trabalhista', ' 123456', 'Especialista em causas trabalhistas com mais de 10 anos de experiência.')">
+                <a href="javascript:void(0)">
+                    <img src="imagens/advogado3.png" alt="Advogada 7">
+                </a>
+                <p><strong>Dra. Maria Oliveira</strong> - Direito Civil</p>
+                <p>OAB: 654321</p>
+            </div>
+            <div id="modal-advogado" class="modal hidden">
+                <div class="modal-content">
+                    <span class="close-button" onclick="fecharModal()">&times;</span>
+                    <h2 id="advogado-nome"></h2>
+                    <p id="advogado-especialidade"></p>
+                    <p id="advogado-oab"></p>
+                    <p id="advogado-descricao"></p>
+                </div>
             </div>
         </div>
     </section>
@@ -146,7 +147,7 @@
             <a class="link-areasAtuacao" href="#">
                 <div class="area">
                     <img src="https://img.icons8.com/?size=100&id=t5GRNS5yIsHP&format=png&color=000000" alt="Direito Contratual">
-                    <h3>DireitoㅤContratual</h3>
+                    <h3>Direito Contratual</h3>
                 </div>
             </a>
             <a class="link-areasAtuacao" href="">
@@ -160,11 +161,13 @@
 
     <!-- Seção Consultas -->
     <section id="consultas" class="section">
-        <h2 class="text-title">Consultas</h2>
-        <p>Gerencie suas consultas ou agende uma nova com nossa equipe jurídica.</p>
-        <div class="consultas-actions">
-            <a href="agendamento.html"> <button>Marcar Consulta</button> </a>
-            <a href="consulta.html"> <button>Gerenciar Consultas</button> </a>
+        <div class="consultas-content">
+            <h2 class="text-title">Consultas</h2>
+            <p>Gerencie suas consultas ou agende uma nova com nossa equipe jurídica.</p>
+            <div class="consultas-actions">
+                <a href="agendamento.html"> <button>Agendar Consulta</button> </a>
+                <a href="consulta.html"> <button>Gerenciar Consultas</button> </a>
+            </div>
         </div>
     </section>
 
