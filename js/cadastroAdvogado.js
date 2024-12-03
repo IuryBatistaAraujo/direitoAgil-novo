@@ -25,6 +25,11 @@ form.addEventListener('submit', async (e) => {
     const result = await response.json();
     if (response.ok) {
       alert('Advogado cadastrado com sucesso!');
+
+      setTimeout(() => {
+        window.location.href = 'http://127.0.0.1:5500/login.html'; // Redireciona para a página de login após 2 segundos
+      }, 1000); // 2000 ms = 2 segundos
+
       form.reset();
     } else {
       alert(`Erro: ${result.error}`);

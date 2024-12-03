@@ -33,6 +33,10 @@ document.querySelector('form').addEventListener('submit', async function(e) {
         if (response.ok) {
             const result = await response.json();
             alert('Usuário cadastrado com sucesso!');
+
+            setTimeout(() => {
+                window.location.href = 'http://127.0.0.1:5500/login.html'; // Redireciona para a página de login após 2 segundos
+              }, 1000); // 2000 ms = 2 segundos
             
             // Limpar os campos do formulário
             document.querySelector('form').reset(); // Método para limpar o formulário
