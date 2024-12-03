@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Advogado</title>
+    <link rel="stylesheet" href="css/cadastros.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Advogado</h1>
+        <form action="http://localhost:3000/advogados/cadastro" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome_adv" name="nome" required>
+
+            <label for="dataNascimento">Data de Nascimento:</label>
+            <input type="date" id="nascimento_adv" name="dataNascimento" required>
+
+            <label for="registroOAB">Registro OAB:</label>
+            <input type="text" id="OAB" name="registroOAB" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email_adv" name="email" required>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="tel_adv" name="telefone" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha_adv" name="senha" required>
+
+            <label for="atuacao_adv">Área de Atuação:</label>
+            <select id="atuacao_adv" name="areaAtuacao" required>
+                <option value="consumidor">Direito do Consumidor</option>
+                <option value="contratual">Direito Contratual</option>
+                <option value="trabalhista">Direito Trabalhista</option>
+            </select>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <script src="js/cadastroAdvogado.js"></script>
+
+</body>
+</html>
