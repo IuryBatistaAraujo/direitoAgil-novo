@@ -31,7 +31,7 @@ document.querySelector("form").addEventListener("submit", async (event) => {
         if (data.role === "user") {
             window.location.href = "http://127.0.0.1:5500/index.html"; // Substitua pelo caminho correto
         } else if (data.role === "advogado") {
-            window.location.href = "http://127.0.0.1:5500/index.html"; // Substitua pelo caminho correto
+            window.location.href = "http://127.0.0.1:5500/consultaAdvogado.html"; // Substitua pelo caminho correto
         }
     } catch (error) {
         alert(error.message);
