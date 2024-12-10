@@ -71,3 +71,7 @@ function agendarConsulta() {
 function gerenciarConsultas() {
     window.location.href = "http://127.0.0.1:5500/consultaUsuario.html";
 }
+
+function gerenciarConsultasadv() {
+    window.location.href = "http://127.0.0.1:5500/consultaAdvogado.html";
+}

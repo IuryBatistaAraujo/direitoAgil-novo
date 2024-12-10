@@ -22,7 +22,6 @@ async function loadAgendamentos() {
             const row = document.createElement("tr");
             row.innerHTML = `
                 <td>${agendamento.nome_adv}</td>
-                <td>${agendamento.area_atuacao}</td>
                 <td>${agendamento.data_agend}</td>
                 <td>${agendamento.horario_agend}</td>
                 <td>${agendamento.descricao}</td>

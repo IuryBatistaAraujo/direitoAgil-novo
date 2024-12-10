@@ -132,6 +132,10 @@ nav ul li a:hover {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
+.inicio- {
+    margin-top: 50px;
+}
+
 /* Botão personalizado */
 #inicio button {
     width: 250px;
@@ -188,23 +192,6 @@ nav ul li a:hover {
     margin-bottom: 20px; /* Espaçamento entre os parágrafos */
 }
 
-/* Media Query para telas pequenas */
-@media (max-width: 768px) {
-    .quem-somos-content {
-        flex-direction: column; /* Organiza o conteúdo em coluna */
-        align-items: center; /* Alinha o conteúdo ao centro */
-    }
-
-    .texto {
-        text-align: center; /* Alinha o texto ao centro em telas pequenas */
-    }
-
-    .quem-somos-content img {
-        max-width: 100%; /* Imagem ocupa 100% da largura disponível */
-        margin-bottom: 20px; /* Adiciona espaçamento entre a imagem e o texto */
-    }
-}
-
 
 /* Estilo da Seção Missão, Visão e Valores */
 #missao-visao-valores {
@@ -241,17 +228,6 @@ nav ul li a:hover {
     color: #555;
 }
 
-/* Media Query para telas pequenas */
-@media (max-width: 768px) {
-    .mvv-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .mvv-item {
-        width: 100%;
-    }
-}
 
 
 /* Equipe */
@@ -393,42 +369,49 @@ nav ul li a:hover {
     background-color: #927f01;
 }
 
-/* Media Query para telas menores */
-@media (max-width: 768px) {
-    .consultas-actions {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
 
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem 0;
-}
-
-/* Media Queries para Responsividade */
-
-/* Ajuste para tablets */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
     }
-
-    .logo {
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-
     nav ul {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        gap: 10px;
     }
+    .logo img {
+        max-height: 50px;
+    }
+    .advogado {
+        width: 100%;
+        margin: 20px 0;
+    }
+}
 
-    nav ul li {
-        margin: 5px 
+body {
+    font-size: 16px; /* Padrão */
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
     }
 }

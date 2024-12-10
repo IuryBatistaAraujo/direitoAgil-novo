@@ -5,6 +5,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    background-image: url('https://images.pexels.com/photos/6077326/pexels-photo-6077326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(10px);
 }
 
 .login-container {
@@ -13,6 +19,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     width: 400px;
+    background-color: rgba(101, 99, 98, 0.6); /* Fundo preto com 50% de transparência*/
 }
 
 h1 {
@@ -21,6 +28,7 @@ h1 {
 }
 
 label {
+    color: #000000;
     display: block;
     margin-bottom: 5px;
 }
@@ -29,12 +37,12 @@ input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     border-radius: 4px;
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #ffd700;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -42,7 +50,11 @@ button {
     cursor: pointer;
 }
 
+.login-container button:hover {
+    background-color: #927f01;
+}
+
 a {
     text-decoration: none;
-    color: #0019fd;
+    color: #002fff;
 }

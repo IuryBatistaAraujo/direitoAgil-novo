@@ -13,31 +13,39 @@ body {
     justify-content: center;
     align-items: flex-start; /* Alinha no topo, para evitar cortes */
     padding: 20px; /* Garante espaço nas laterais em telas menores */
+    background-image: url('https://images.pexels.com/photos/6077326/pexels-photo-6077326.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    backdrop-filter: blur(10px);
 }
 
 .container {
-    background: #fff;
     padding: 20px 40px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 500px;
     margin-top: 20px; /* Dá espaço do topo para telas pequenas */
+    background-color: rgba(101, 99, 98, 0.6); /* Fundo preto com 50% de transparência*/
 }
 
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #007BFF;
+    color: #000000;
 }
 
 label {
+    color: #000000;
     display: block;
     margin-top: 10px;
     font-weight: bold;
 }
 
 input, select, textarea, button {
+    color: #000000;
     width: 100%;
     margin-top: 5px;
     padding: 10px;
@@ -51,7 +59,7 @@ textarea {
 }
 
 button {
-    background-color: #007BFF;
+    background-color: #ffd700;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -60,5 +68,5 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #927f01;
 }

@@ -20,12 +20,9 @@
                 <li><a href="#quem-somos">Quem Somos</a></li>
                 <li><a href="#equipe">Equipe</a></li>
                 <li><a href="#areas-atuacao">Áreas de Atuação</a></li>
-                <li><a href="#consultas">Consultas</a></li>
             </ul>
         </nav>
-        <div class="entrar">
-            <button id="entrar-btn" onclick="window.location.href='http://127.0.0.1:5500/login.html'">Entrar</button>
-        </div>
+        
         <!-- Adicionar o nome do usuário ou advogado aqui -->
         <div id="usuario-info" class="usuario-info hidden">
             <span id="usuario-nome"></span>
@@ -38,7 +35,7 @@
         <div class="inicio-">
             <h1>Bem-vindo à Direito Ágil</h1>
             <p>Consultoria jurídica online com agilidade e eficiência.</p>
-            <button id="agendar-consulta-btn1" onclick="agendarConsulta()">Agendar Consulta</button>
+            <button id="agendar-consulta-btn1" onclick="gerenciarConsultasadv()">Meus Agendamentos</button>
         </div>
     </section>
 
@@ -162,18 +159,6 @@
                     <h3>Direito do Consumidor</h3>
                 </div>
             </a>
-        </div>
-    </section>
-
-    <!-- Seção Consultas -->
-    <section id="consultas" class="section">
-        <div class="consultas-content">
-            <h2 class="text-title">Consultas</h2>
-            <p>Gerencie suas consultas ou agende uma nova com nossa equipe jurídica.</p>
-            <div class="consultas-actions">
-                <button id="agendar-consulta-btn2" onclick="agendarConsulta()">Agendar Consulta</button>
-                <button id="gerenciar-consultas-btn" onclick="gerenciarConsultas()">Gerenciar Consultas</button>
-            </div>
         </div>
     </section>
 
